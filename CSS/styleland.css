@@ -88,11 +88,11 @@ section {
   font-size: 17px;
 }
 .topnav a.active {
-  background-image: linear-gradient(#ffcc00, #cc0099, #cc0099);
+  background-image: ;
   color: white;
 }
 a.your-active-class {
-  background-image: linear-gradient(#ffcc00, #cc0099, #cc0099);
+  background-image: ;
   color: white;
 }
 

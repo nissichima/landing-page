@@ -1,6 +1,6 @@
 const barMenu = document.querySelector("#navbar__list");
-const menuSections = document.querySelectorAll("sec");
-
+const menuSections = document.querySelectorAll('[id^=sec]');
+console.log(menuSections);
 // build the nav
 function navBuilder() {
   const frag = document.createDocumentFragment();
@@ -11,12 +11,10 @@ function navBuilder() {
     aTag.innerText = menuSection.getAttribute("data-nav");
     aTag.setAttribute("class", "menu__link");
 
-    // scroll to anchor ID using scroll to event
-    aTag.addEventListener("click", () => {
-      menuSection.scrollIntoView({ behavior: "smooth" });
-    });
     liTag.appendChild(aTag);
+    console.log(aTag);
     frag.appendChild(liTag);
+    console.log(liTag);
   });
   barMenu.appendChild(frag);
 }
@@ -25,7 +23,7 @@ function navBuilder() {
 let anchorSelector = 'a[href^="#"]';
 
 let anchorList = document.querySelectorAll(anchorSelector);
-anchorList.forEach((link) => {
+anchorList.forEach(link => {
   link.onclick = function (e) {
     // Prevent scrolling if the hash value is blank
     e.preventDefault();
@@ -37,7 +35,7 @@ anchorList.forEach((link) => {
     destination.scrollIntoView({
       behavior: "smooth",
     });
-  };
+  }
 });
 
 function getvisIndex() {
@@ -80,5 +78,6 @@ function activeSection() {
 
 // Call function that builds navigation menu
 navBuilder();
+
 
 document.addEventListener("scroll", activeSection);
