@@ -1,82 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Landing Page</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  <!-- Load Styles -->
-  <link href="styleland.css" type="text/css" rel="stylesheet" />
-</head>
-<body>
-  
-  <!-- HTML Follows BEM naming conventions 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Landing Page</title>
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet" />
+    <!-- Load Styles -->
+    <link href="CSS/styleland.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
-    </nav>
-    <div class="topnav">
-    
-        <a class="active" href="#hair">Hair</a>
-        <a class = "hair" href="#skin">Skincare</a>
-        <a class = "makeup" href="#makeup">Makeup</a>
-        <a class = "frag" href="#frag">Fragrance</a>
-    </div>
-  </header>
-  <main>
-    <div class="image">
-        <img src="makeup.jpg" height="390px" width="1250px">
-        <div class="bottom-left">Beauty Basics</div>
-    </div>
-    <header class="main__hero">
-      <p id = "textr">Enter Email Address to Register for Updates!</p>
-      <input type="text" id="boxx"/>
-      <input type="checkbox" id="check">I agree to Nissi’s <a href = "blog-post.html">Terms of Service</a>:)
+    <header class="page__header">
+      <nav class="topnav">
+        <ul id="navbar__list"></ul>
+      </nav>
     </header>
-    <!-- Each Section has an ID (used for the anchor) and 
+    <main>
+      <div class="image">
+        <img src="makeup.jpg" height="390px" width="1250px" />
+        <div class="bottom-left">Beauty Basics</div>
+      </div>
+      <header class="main__hero">
+        <p id="textr">Enter Email Address to Register for Updates!</p>
+        <input type="text" id="boxx" />
+        <input type="checkbox" id="check" />I agree to Nissi’s <a id="checkk" href="blog-post.html">Terms of Service</a>:)
+      </header>
+      <!-- Each Section has an ID (used for the anchor) and 
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-    <section id="hair" data-nav="Section 1" class="your-active-class">
-      <div class="landing__container">
-        <h2>Hair</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+      <section id="sec1" data-nav="Hair" class="your-active-class">
+        <div class="landing__container">
+          <h2>Hair</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet
+            porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue
+            et odio sed euismod.
+          </p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="skin" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Skincare</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="makeup" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Makeup</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
-
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor.
+            Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.
+          </p>
+        </div>
       </section>
-      <section id="frag" data-nav="Section 4" class="your-active-class">
-      <div class="landing__container">
-        <h2>Fragrance</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue et odio sed euismod.</p>
+      <section id="sec2" data-nav="Skincare">
+        <div class="landing__container">
+          <h2>Skincare</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet
+            porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue
+            et odio sed euismod.
+          </p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="page__footer">
-    <p>&copy NissiStudios</p>
-  </footer>
-  
-  <script type="text/javascript" src="javaland.js"></script>
-</body>
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor.
+            Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <section id="sec3" data-nav="Makeup">
+        <div class="landing__container">
+          <h2>Makeup</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet
+            porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue
+            et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor.
+            Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+      <section id="sec4" data-nav="Fragrance">
+        <div class="landing__container">
+          <h2>Fragrance</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus imperdiet
+            porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet elit a pharetra. Duis
+            lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus. Sed congue
+            et odio sed euismod.
+          </p>
+
+          <p>
+            Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur porttitor.
+            Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="page__footer">
+      <p>&copy NissiStudios</p>
+    </footer>
+
+    <script type="text/javascript" src="JS/app.js"></script>
+  </body>
 </html>
