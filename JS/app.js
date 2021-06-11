@@ -67,4 +67,4 @@ function activeSection() {
 // Call function that builds navigation menu
 navBuilder();
 
-//document.addEventListener("scroll", activeSection);
+document.addEventListener("scroll", activeSection);

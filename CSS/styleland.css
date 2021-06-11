@@ -91,8 +91,9 @@ section {
   color: white;
 }
 
-class ^= "menu___link your-active-class" {
-  background: #ffff00;
+a.your-active-class {
+  background: linear-gradient(#ffcc00, #cc0099, #cc0099);
+
 }
 
 /* Header Styles */
@@ -234,7 +235,8 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-  background: ;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 80%);
 }
 
 section.your-active-class .landing__container::before {
