@@ -22,4 +22,4 @@ Here is where the functionality happens.
 Most of the code here was taken from the skelton code provided by Udacity. This gives the landing page the look and feel that you see and experience. One notable thing is the hover animation on the active navigation header.
 
 ## Running
-To launch this website, simply clone the repo and open the index.html file in the browser.
+To launch this website, simply clone the repo and open the landpage.html file in the browser.
