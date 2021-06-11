@@ -10,7 +10,12 @@ function navBuilder() {
     let aTag = document.createElement("a");
     aTag.innerText = menuSection.getAttribute("data-nav");
     aTag.setAttribute("class", "menu__link");
-    aTag.href = "somelink url";
+    aTag.href = "#somelink url";
+    
+    //scroll to anchor ID using scroll to event
+        aTag.addEventListener("click", () => {
+            menuSection.scrollIntoView({behavior: "smooth"});
+            });
 
     liTag.appendChild(aTag);
     frag.appendChild(liTag);
@@ -19,25 +24,7 @@ function navBuilder() {
   barMenu.appendChild(frag);
 };
 
-/*Scroll smoothly
-let anchorSelector = 'a[href^="#"]';
 
-let anchorList = document.querySelectorAll(anchorSelector);
-
-anchorList.forEach(link => {
-    link.onclick = function(e){
-        // Prevent scrolling if the hash value is blank
-        e.preventDefault();
-
-        //Get the destination to scroll to using the hash property.
-        let destination = document.querySelector(this.hash);
-
-        //Scroll to the destination using scrollIntoView method
-        destination.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-});
 
 function getvisIndex() {
   let minor = window.innerHeight;
@@ -76,7 +63,7 @@ function activeSection() {
     }
   }
 }
-*/
+
 // Call function that builds navigation menu
 navBuilder();
 
