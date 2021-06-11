@@ -1,41 +1,42 @@
 const barMenu = document.querySelector("#navbar__list");
-const menuSections = document.querySelectorAll('[id^=sec]');
-console.log(menuSections);
+const menuSections = document.querySelectorAll("[id^=sec]");
+
 // build the nav
 function navBuilder() {
   const frag = document.createDocumentFragment();
 
   menuSections.forEach((menuSection) => {
     const liTag = document.createElement("li");
-    const aTag = document.createElement("a");
+    let aTag = document.createElement("a");
     aTag.innerText = menuSection.getAttribute("data-nav");
     aTag.setAttribute("class", "menu__link");
+    aTag.href = "somelink url";
 
     liTag.appendChild(aTag);
-    console.log(aTag);
     frag.appendChild(liTag);
-    console.log(liTag);
   });
-  barMenu.appendChild(frag);
-}
 
-//Scroll smoothly
+  barMenu.appendChild(frag);
+};
+
+/*Scroll smoothly
 let anchorSelector = 'a[href^="#"]';
 
 let anchorList = document.querySelectorAll(anchorSelector);
+
 anchorList.forEach(link => {
-  link.onclick = function (e) {
-    // Prevent scrolling if the hash value is blank
-    e.preventDefault();
+    link.onclick = function(e){
+        // Prevent scrolling if the hash value is blank
+        e.preventDefault();
 
-    //Get the destination to scroll to using the hash property.
-    let destination = document.querySelector(this.hash);
+        //Get the destination to scroll to using the hash property.
+        let destination = document.querySelector(this.hash);
 
-    //Scroll to the destination using scrollIntoView method
-    destination.scrollIntoView({
-      behavior: "smooth",
-    });
-  }
+        //Scroll to the destination using scrollIntoView method
+        destination.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
 });
 
 function getvisIndex() {
@@ -75,9 +76,8 @@ function activeSection() {
     }
   }
 }
-
+*/
 // Call function that builds navigation menu
 navBuilder();
 
-
-document.addEventListener("scroll", activeSection);
+//document.addEventListener("scroll", activeSection);
